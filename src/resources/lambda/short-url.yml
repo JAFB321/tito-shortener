@@ -1,13 +1,15 @@
 postShortUrl:
   handler: src/handlers/short-url/postShortUrl.handler
   events:
-    - httpApi:
+    - http:
         path: /short-url
         method: post
+        cors: true
 
 getShortUrl:
   handler: src/handlers/short-url/getShortUrl.handler
   events:
-    - httpApi:
+    - http:
         path: /short-url
         method: get
+        cors: true
