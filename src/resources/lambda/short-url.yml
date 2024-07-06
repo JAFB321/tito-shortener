@@ -1,0 +1,13 @@
+postShortUrl:
+  handler: src/handlers/short-url/postShortUrl.handler
+  events:
+    - httpApi:
+        path: /short-url
+        method: post
+
+getShortUrl:
+  handler: src/handlers/short-url/getShortUrl.handler
+  events:
+    - httpApi:
+        path: /short-url
+        method: get

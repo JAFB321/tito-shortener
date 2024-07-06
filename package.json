@@ -1,0 +1,22 @@
+{
+  "name": "tito-shortener-v3",
+  "version": "1.0.0",
+  "description": "<!-- title: 'AWS Simple HTTP Endpoint example in NodeJS' description: 'This template demonstrates how to make a simple HTTP API with Node.js running on AWS Lambda and API Gateway using the Serverless Framework.' layout: Doc framework: v4 platform: AWS language: nodeJS authorLink: 'https://github.com/serverless' authorName: 'Serverless, Inc.' authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4' -->",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sls offline --noTimeout --reloadHandler"
+  },
+  "keywords": [],
+  "author": "jafb321",
+  "license": "ISC",
+  "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.609.0",
+    "@aws-sdk/client-s3": "^3.609.0",
+    "@aws-sdk/lib-dynamodb": "^3.609.0",
+    "@serverless/typescript": "^3.38.0",
+    "serverless-offline": "^13.6.0",
+    "@types/aws-lambda": "^8.10.140"
+  }
+}

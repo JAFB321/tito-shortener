@@ -1,0 +1,30 @@
+org: jafbdev
+service: tito-shortener-v3
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  iam:
+    role:
+      statements:
+        # Allow functions to list all buckets
+        - Effect: Allow
+          Action: 'dynamodb:*'
+          Resource: '*'
+
+package: 
+  individually: true
+  excludeDevDependencies: true
+  exclude:
+    - node_modules/**
+    - .git/**
+
+functions:
+  - ${file(src/resources/lambda/short-url.yml)}
+
+resources:
+  - ${file(src/resources/dynamo/shortUrlsTable.yml)}
+  - ${file(src/resources/dynamo/currentIdTable.yml)}

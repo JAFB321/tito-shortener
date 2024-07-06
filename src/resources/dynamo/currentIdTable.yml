@@ -1,0 +1,12 @@
+Resources:
+  currentIdTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: currentIdTable
+      AttributeDefinitions:
+        - AttributeName: version
+          AttributeType: S
+      KeySchema:
+        - AttributeName: version
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
